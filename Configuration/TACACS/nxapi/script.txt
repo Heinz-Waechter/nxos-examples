@@ -1,1 +1,16 @@
-Coming soon...
+#Configure tacacs server
+POST URL: http://SWITCH_IP/api/node/mo/sys/userext/tacacsext.json 
+Content-Type: application/json
+Cache-Control: no-cache
+POST BODY :
+{
+	"aaaTacacsPlusEp": {
+		"attributes": {
+			"timeout": "20", 
+			"deadtime": "10", 
+			"keyEnc": "7", 
+			"key": "cisco", 
+			"srcIf": "mgmt 0"
+		}		
+	}
+}
