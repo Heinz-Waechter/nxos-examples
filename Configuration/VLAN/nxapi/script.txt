@@ -1,0 +1,52 @@
+#Create VLAN 100
+
+POST URL: http://SWITCH-IP/api/node/mo/sys/bd/bd-[vlan-100].json
+Content-Type: application/json
+Cache-Control: no-cache
+POST-BODY:
+{
+"l2BD": {
+"attributes": {
+"fabEncap": "vlan-100",
+"id": "100"
+}
+}
+}
+
+#Configure eth1/1 as Access Interface with VLAN 300
+
+POST URL: http://SWITCH-IP/api/mo/sys/intf/phys-[eth1/1]/.json
+Content-Type: application/json
+Cache-Control: no-cache
+POST-BODY:
+{
+"l1PhysIf": {
+"attributes": {
+"accessVlan": "vlan-300",
+"layer": "Layer2",
+"mode": "access"
+}
+}
+}
+
+#Configure trunk interface of VLAN 100 and 200 on interface eth1/1
+
+POST URL: http://SWITCH-IP/api/mo/sys/intf/phys-[eth1/1]/.json
+Content-Type: application/json
+Cache-Control: no-cache
+POST-BODY:
+{
+"l1PhysIf": {
+"attributes": {
+"layer": "Layer2",
+"mode": "trunk",
+"trunkVlans": "100,200"
+}
+}
+}
+
+#Delete VLAN 200
+
+DELETE URL: http://SWITCH-IP/api/node/mo/sys/bd/bd-[vlan-100].json
+Content-Type: application/json
+Cache-Control: no-cache

@@ -1,0 +1,13 @@
+#Show pysical ethernet port
+GET http://SWITCH_IP/api/mo/sys/intf/phys-[eth1/1].json?query-target=self
+Host: switch_ip
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: f92aa2b5-ac52-a3ff-60fa-348a69faf3e0
+
+#Get Interface statistics
+GET http://SWITCH_IP/api/mo/sys/intf/phys-[eth1/5].json?rsp-subtree=full&rsp-subtree-include=stats
+Host: switch_ip
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 61080f1e-cd96-5e9c-8797-a6e9936bc7e5

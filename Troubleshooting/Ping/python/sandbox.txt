@@ -1,0 +1,12 @@
+Follow following steps to execute the python scripts on Nexus switch.
+
+  1. Login to switch using provided credentials. Example username is ‘admin’ and password ‘cisco123’.
+  2. If bash is not enabled, Goto 'config t' and enable it by running 'feature bash-shell'
+  3. Run ‘run bash’ to go to bash shell.
+  4. Run sudo su
+  5. Copy the required script to /isan/python/scripts/cisco directory. For example, if you want to manage ping
+  configuration using python, create test_ping.py using vi editor like this:
+  vi test_ping.py
+  6. Now copy the script to this file. Save and exit.
+  7. Execute following command to run the script '/isan/bin/python –m cisco.test_ping
+  8. The format of the command to be executed is, '/isan/bin/python -m'

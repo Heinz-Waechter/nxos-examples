@@ -1,0 +1,31 @@
+
+#Configure physical ethernet port for various interface properties on eth1/1
+POST URL: http://SWITCH_IP/api/mo/sys/intf/phys-[eth1/1].json?query-target=self
+Content-Type: application/json
+Cache-Control: no-cache
+POST BODY :
+{
+    "l1PhysIf": {
+        "attributes": {
+            "accessVlan": "vlan-321",
+            "adminSt": "down",
+            "bw": "0",
+            "childAction": "",
+            "delay": "1",
+            "descr": "Sample test",
+            "duplex": "auto",
+            "id": "eth1/1",
+            "layer": "Layer2",
+            "lcOwn": "local",
+            "linkDebounce": "100",
+            "mdix": "auto",
+            "mode": "access",
+            "mtu": "1500",
+            "portT": "leaf",
+            "snmpTrapSt": "enable",
+            "speed": "auto",
+            "trunkLog": "default",
+            "trunkVlans": "1-4094"
+        }
+    }
+}

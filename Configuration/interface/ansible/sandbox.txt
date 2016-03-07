@@ -1,0 +1,32 @@
+Following steps would execute the playbook files on nx9000 switch.
+
+1. SSH to toolserver host using provided credentials. (If credentials are not provided Default username is ‘cisco’ and password ‘cisco123’)
+
+2. Edit the .netauth file to add the credentials of the switches. (Default username is 'cisco' and password is 'cisco123')
+Example: 
+vi .netauth (do it under /home/USER directory. Here USER is cisco)
+cisco:
+nexus:
+username: "admin"
+password: "cisco123"
+
+3. Go to /home/cisco/nxos-ansible directory. Edit hosts file and add the list of hosts / device names under switches section.
+   Note: device or host names must be added in /etc/hosts file
+
+   Example: vi hosts under /home/cisco/nxos-ansible. Then add below contents
+   [all:vars]
+   ansible_connection = local
+   [switches]
+   n9kvswitchfcs
+   
+   Note: Make sure "n9kvswitchfcs" name is added in /etc/hosts and /etc/hosts should contain "SWITCH_IP  n9kvswitchfcs". Replace the IP of the switch with SWITCH_IP
+   
+4. Copy the respective playbook scripts to /home/USER/nxos-ansible/test-playbooks directory (replace the username with USER). Supppose you want to configure interface, then create a .yml file using vi editor and paste the playbook scripts to it.
+
+5. Save and exit
+
+6. Run "ansible-playbook -i hosts test-playbooks/PLAYBOOK_FILE_NAME.yml"
+   Example:
+   $ ansible-playbook -i hosts test-playbooks/interface.yml
+
+7. Go to switch prompt and run 'copy r s'

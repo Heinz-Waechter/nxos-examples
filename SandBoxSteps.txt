@@ -1,0 +1,8 @@
+How to connect to sandbox lab:
+
+1. Go to the sandbox homepage: https://developer.cisco.com/site/devnet/sandbox/
+2. Login. Hit the yellow button “Go To the Labs” button
+3. In the upper-right corner click on “DEVNET”.
+4. Now you are in Cisco's Devnet domain and it would list the labs hosted under the domain.
+5.  You can find the 8 tiles for the NX-OS labs. The tiles are named as "Open NX-OS Lab -1(through 8)"
+6. Click on 'Reserve' a lab. Upon successful reservation you would receive a mail from "devnetsandbox@cisco.com" that describes further instructions to access the sandbox.

@@ -1,0 +1,53 @@
+Follow below steps to execute nxapi code snippet on nx9000 switch.
+
+On the nx9000 switch perform following operation.
+  1. SSH to switch using provided credentials. (If credentials are not provided Default username is ‘admin’ and password ‘cisco123’
+  2. Run 'config t' on the switch prompt.
+  3. Enable nxapi by running ‘feature nxapi’.
+  4. Exit to switch prompt by running 'exit'.
+  5. Run 'copy r s' to save the configuration.
+
+Setup postman Code snippet:
+In order to execute NXAPI from postman, login needs to be performed. The cookie would get generated and stored for subsequent execution.
+
+  POST-URL : http://SWITCH-IP/api/aaaLogin.json
+  Content-Type: application/json
+  Cache-Control: no-cache
+  POST BODY :
+  {
+    "aaaUser" : {
+      "attributes" : {
+        "name" : "SWITCH_USER",
+        "pwd" : "SWITCH_PASSWORD"
+      }
+    }
+  }
+
+Executing NXAPI using postman for first time:
+
+  1. Copy POST URL, mentioned in 'setup postman' section above, after replacing SWITCH-IP with IP address of Nexus switch .
+  2. Select method as POST
+  3. Open raw JSON section.
+  4. Copy POST-BODY JSON to raw JSON body section of postman.
+  5. Replace SWITCH_USERNAME with switch user.
+  6. Replace SWITCH_PASSWORD with switch password.
+  7. Click send button
+
+  Note: If the cookie gets expired, you might have to perform the above steps again.
+
+For subsequent NXAPI call:
+
+  1. Copy POST URL, after replacing SWITCH-IP with IP address of Nexus switch.
+  2. Select method as POST
+  3. Open raw JSON section.
+  4. Copy POST-BODY JSON to raw JSON body section of postman.
+  5. Click send button
+
+How to connect to sandbox lab:
+
+  1. Go to the sandbox homepage: https://developer.cisco.com/site/devnet/sandbox/
+  2. Login. Hit the yellow button “Go To the Labs” button
+  3. In the upper-right corner click on “DEVNET”.
+  4. Now you are in Cisco's Devnet domain and it would list the labs hosted under the domain.
+  5. You can find the 8 tiles for the NX-OS labs. The tiles are named as "Open NX-OS Lab -1(through 8)"
+  6. Click on 'Reserve' a lab. Upon successful reservation you would receive a mail from "devnetsandbox@cisco.com" that describes further instructions to access the sandbox.

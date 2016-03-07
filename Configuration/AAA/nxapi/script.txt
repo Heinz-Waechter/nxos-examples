@@ -1,0 +1,14 @@
+#Configure aaa authentication to show or display of error message on login failures and ascii authentication
+
+POST URL: http://SWITCH_IP/api/node/mo/sys/userext/authrealm.json
+Content-Type: application/json
+
+POST BODY :
+{
+      "aaaDefaultAuth": {
+        "attributes": {
+          "authProtocol": "ascii",
+          "errEn": "no"
+        }
+    }
+}

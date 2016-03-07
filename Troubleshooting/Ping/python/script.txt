@@ -1,0 +1,27 @@
+#Sample file to troubleshoot using ping
+
+from .nxcli import NXCLI
+import traceback
+
+# Fill the details to troubleshoot using ping
+host = '172.31.219.60'
+count = '4'
+vrf = 'management'
+
+
+def check_ping_ops():
+        """
+        Checks if the host is reachable
+        """
+        try:
+                interface = NXCLI('ping %s count %s vrf %s' % (host, count, vrf))
+                return True
+        except:
+                return False
+
+if __name__=="__main__":
+
+        try:
+                check_ping_ops()
+        except Exception,e:
+                traceback.print_exc()

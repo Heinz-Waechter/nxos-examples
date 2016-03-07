@@ -1,0 +1,25 @@
+#Sample file to troubleshoot using traceroute
+
+from .nxcli import NXCLI
+import traceback
+
+# Fill the details to troubleshoot using traceroute
+host = '172.31.219.60'
+vrf = 'management'
+
+def check_traceroute_ops():
+        """
+        traceroute the host
+        """
+        try:
+                interface = NXCLI('traceroute %s vrf %s' % (host, vrf))
+                return True
+        except:
+                return False
+
+if __name__=="__main__":
+
+        try:
+                check_traceroute_ops()
+        except Exception,e:
+                traceback.print_exc()
