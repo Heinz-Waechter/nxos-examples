@@ -1,0 +1,4 @@
+VXLAN provides a solution to extend Layer 2 networks across Layer 3 infrastructure by way of MAC-in-UDP encapsulation and tunneling.
+The pre requisite for this section is to have leaf-spine architecture with VXLAN configured.
+This section is monitoring the NVE interface and VNI details.
+

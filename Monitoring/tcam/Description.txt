@@ -1,0 +1,3 @@
+Ternary Content Addressable Memory. This is the space in hardware where access-lists (ACLs)  are stored. 
+This is a specialized piece of memory that stores complex tabular data and supports very rapid parallel lookups.
+This section monitors current utilization of each configured TCAM region, hardware and software configuration.

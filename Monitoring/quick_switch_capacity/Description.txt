@@ -1,0 +1,1 @@
+This section gives report details of MAC address table, size of ACL TCAM region and port channel usage.

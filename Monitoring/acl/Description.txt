@@ -1,0 +1,4 @@
+Cisco provides basic traffic filtering capabilities with access control lists (also referred to as access lists). 
+Access lists can be configured for all routed network protocols (IP, AppleTalk, and so on) to filter the packets of those protocols as the packets pass through a router.
+A time range is created that defines specific times of the day and week in order to implement time-based ACLs.
+This section configures ACL with a time range and applies it to an interface and monitor the ACL on Cisco Nexus 9000.

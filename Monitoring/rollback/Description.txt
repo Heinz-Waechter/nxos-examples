@@ -1,0 +1,4 @@
+The rollback feature allows you to take a snapshot, or user checkpoint, of the Cisco NX-OS configuration and then reapply that configuration to your device at any point without 
+having to reload the device. A rollback allows any authorized administrator to apply this checkpoint configuration without requiring expert knowledge of the features configured in the 
+checkpoint.
+This section creates a checkpoint , then rollsback the configuration to the checkpoint.

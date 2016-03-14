@@ -1,0 +1,1 @@
+The simple Network Management Protocol (SNMP) is an application-layer protocol that provides a message format for communication between SNMP managers and agents. SNMP provides a standardized framework and a common language used for the monitoring and management of devices in a network. Following example shows snmp community configuration.

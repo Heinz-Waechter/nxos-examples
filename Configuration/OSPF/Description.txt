@@ -1,0 +1,1 @@
+Implement Open Shortest Path First (OSPF). OSPF supports IP subnetting and tagging of externally derived routing information. OSPF also allows packet authentication and uses IP multicast when sending and receiving packets. This section describe how you can manage and configure OSPF on a CISCO Nexus 9000 switch using different configuration management code snippet.

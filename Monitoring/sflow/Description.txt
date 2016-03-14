@@ -1,0 +1,3 @@
+Sampled flow (sFlow) allows you to monitor real-time traffic in data networks that contain switches and routers. 
+It uses the sampling mechanism in the sFlow agent software on switches and routers to monitor traffic and to forward the sample data to the central data collector.
+This section monitors sflow statistics and sflow configuration.

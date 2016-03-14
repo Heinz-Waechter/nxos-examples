@@ -1,0 +1,3 @@
+IP Service Level Agreements (SLAs) allow you to manage IP service levels for IP applications and services.
+Cisco NX-OS IP SLAs performs active monitoring by generating and analyzing traffic to measure performance either between Cisco NX-OS devices or from a Cisco NX-OS device to a remote IP device such as a network application server. 
+This section monitors IP SLA configuration, application and statistics.
