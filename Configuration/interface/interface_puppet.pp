@@ -18,5 +18,3 @@
         svi_autostate => false,
         svi_management => true,
      }
-
-    
